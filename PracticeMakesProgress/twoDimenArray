@@ -1,0 +1,43 @@
+//Array flattenr activity
+// Define a function arrayFlattener with a 2 dimensional array as parameter:
+// example of 2 dimensional array: [1,[2,3],4,5]
+
+//Return a new 1 dimensional array like, [1,2,3,4]
+//your code here
+function arrayFlattener (inputArray) { 
+  let oneDimenArr = []; 
+  let oneDimenCounter = 0;
+  if (inputArray instanceof Array) {
+    for (let i=0; i< inputArray.length; i++ ){
+       if (inputArray[i] instanceof Array) {
+        for (let j=0; j< inputArray[i].length; j++ ){
+         // console.log("insdie j for loop, arrya value  " + inputArray[i][j]);
+          //oneDimenArr[oneDimenCounter] = inputArray[i][j];
+      oneDimenArr [oneDimenCounter] = inputArray[i][j];
+          oneDimenCounter++;
+//console.log("insdie j for loop 1D array " + oneDimenArr [oneDimenCounter-1] + " counter "+ oneDimenCounter);
+
+        }
+      }
+      else 
+      {
+      oneDimenArr [oneDimenCounter] = inputArray[i];
+      oneDimenCounter++;
+      //console.log("inside i for loop 1D array " + oneDimenArr [oneDimenCounter-1] + " counter "+ oneDimenCounter);
+
+      } 
+    }
+  }
+  return oneDimenArr;
+}
+
+
+//uncomment next line one by one, then check the console for results
+console.log(arrayFlattener([1,[2,3],4,5]))
+
+//don't change this line
+if (typeof module !== "undefined") {
+  module.exports = {
+    arrayFlattener,
+  };
+}

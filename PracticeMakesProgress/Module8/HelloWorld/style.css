@@ -1,0 +1,19 @@
+h1 {
+  font-size: 5em;
+  color: blueviolet;
+}
+.greeting {
+  color: purple;
+}
+
+#greeting {
+  color: sandybrown;
+}
+.greenItems {
+  color: green;
+  font-size: 4em;
+}
+.redItems {
+  font-size: 2em;
+  color: red;
+}
